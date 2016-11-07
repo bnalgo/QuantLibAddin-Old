@@ -112,6 +112,43 @@
         </Parameters>
       </ParameterList>
     </Constructor>
-  
+
+      <Constructor name="qlCrossCcySwap2">
+          <libraryFunction>CrossCcySwap</libraryFunction>
+          <SupportedPlatforms>
+              <!--SupportedPlatform name='Excel' calcInWizard='false'/-->
+              <SupportedPlatform name="Excel"/>
+              <SupportedPlatform name="Cpp"/>
+          </SupportedPlatforms>
+          <processorName>InstrumentProcessor</processorName>
+          <ParameterList>
+              <Parameters>
+                  <Parameter name="LegIDs">
+                      <type>QuantLibAddin::Leg</type>
+                      <!--
+            
+                        it would be better to have support
+                        for vector of underlyingClass
+                
+                      <type>QuantLib::Leg</type>
+                      <supertype>underlyingClass</supertype>
+                      -->
+                      <tensorRank>vector</tensorRank>
+                      <description>FirstLeg ID.</description>
+                  </Parameter>
+                  <Parameter name="FirstLegCcy">
+                      <type>bool</type>
+                      <tensorRank>vector</tensorRank>
+                      <description>Payers.</description>
+                  </Parameter>
+                  <Parameter name="SecondLeg">
+                      <type>QuantLib::Currency</type>
+                      <tensorRank>vector</tensorRank>
+                      <description>Currencies.</description>
+                  </Parameter>
+              </Parameters>
+          </ParameterList>
+      </Constructor>
+
   </Functions>
   </Category>

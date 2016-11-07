@@ -63,4 +63,22 @@ namespace QuantLibAddin{
 			libraryObject_ = boost::shared_ptr<QuantLib::Instrument>(new
 				QuantLib::CrossCcySwap(firstLeg,firstLegCcy,secondLeg,secondLegCcy));
 	}
+
+	CrossCcySwap::CrossCcySwap(
+		const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+        const std::vector<boost::shared_ptr<Leg> >& legPtrs,
+        const std::vector<bool>& payer,
+        const std::vector<QuantLib::Currency>& currencies,
+		bool permanent) : Instrument(properties,permanent){
+
+        std::vector<QuantLib::Leg> legs(legPtrs.size());
+        boost::shared_ptr<QuantLib::Leg> qlLeg;
+        for (QuantLib::Size i=0; i<legPtrs.size(); ++i) {
+            legPtrs[i]->getLibraryObject(qlLeg);
+            legs[i] = *qlLeg;
+        }
+
+        libraryObject_ = boost::shared_ptr<QuantLib::Instrument>(new
+			QuantLib::CrossCcySwap(legs, payer, currencies));
+	}
 }

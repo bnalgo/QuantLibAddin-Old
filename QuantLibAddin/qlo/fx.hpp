@@ -70,14 +70,19 @@ namespace QuantLibAddin{
 			bool permanent);
 	};
 
-	class CrossCcySwap : public Instrument{
+    class CrossCcySwap : public Instrument{
 	public:
 		CrossCcySwap(
 			const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
 			const QuantLib::Leg& firstLeg, const QuantLib::Currency& firstLegCcy, 
 			const QuantLib::Leg& secondLeg, const QuantLib::Currency& secondLegCcy,
 		    bool permanent);
-
+		CrossCcySwap(
+			const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+            const std::vector<boost::shared_ptr<Leg> >& legPtrs,
+            const std::vector<bool>& payer,
+            const std::vector<QuantLib::Currency>& currencies,
+		    bool permanent);
 	};
 
 
