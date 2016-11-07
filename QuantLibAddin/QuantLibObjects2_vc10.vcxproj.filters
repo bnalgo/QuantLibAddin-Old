@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="enumerations">
@@ -848,6 +848,16 @@
     </ClCompile>
     <ClCompile Include="qlo\calibrationhelpers.cpp">
       <Filter>ShortRateModels</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\fx.cpp" />
+    <ClCompile Include="qlo\serialization\create\create_fx.cpp">
+      <Filter>serialization\create</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\serialization\register\serialization_fx.cpp">
+      <Filter>serialization\register</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\valueobjects\vo_fx.cpp">
+      <Filter>valueobjects</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -1747,6 +1757,15 @@
     <ClInclude Include="qlo\calibrationhelpers.hpp">
       <Filter>ShortRateModels</Filter>
     </ClInclude>
+    <ClInclude Include="qlo\fx.hpp" />
+    <ClInclude Include="qlo\serialization\create\create_fx.hpp">
+      <Filter>serialization\create</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\serialization\register\serialization_fx.hpp">
+      <Filter>serialization\register</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\valueobjects\vo_fx.hpp">
+      <Filter>valueobjects</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
-

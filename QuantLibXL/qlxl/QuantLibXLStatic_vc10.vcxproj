@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug (static runtime)|Win32">
@@ -288,6 +288,7 @@
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="functions\fx.cpp" />
     <ClCompile Include="register\addin.cpp" />
     <ClCompile Include="register\register_abcd.cpp" />
     <ClCompile Include="register\register_accountingengines.cpp" />
@@ -316,6 +317,7 @@
     <ClCompile Include="register\register_evolutiondescription.cpp" />
     <ClCompile Include="register\register_exercise.cpp" />
     <ClCompile Include="register\register_forwardrateagreement.cpp" />
+    <ClCompile Include="register\register_fx.cpp" />
     <ClCompile Include="register\register_handles.cpp" />
     <ClCompile Include="register\register_index.cpp" />
     <ClCompile Include="register\register_instruments.cpp" />

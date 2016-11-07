@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug (static runtime)|Win32">
@@ -225,6 +225,9 @@
     <ClCompile Include="qlo\enumerations\constructors\enumeratedclasses.cpp" />
     <ClCompile Include="qlo\enumerations\constructors\enumeratedpairs.cpp" />
     <ClCompile Include="qlo\enumerations\factories\calendarfactory.cpp" />
+    <ClCompile Include="qlo\fx.cpp" />
+    <ClCompile Include="qlo\serialization\create\create_fx.cpp" />
+    <ClCompile Include="qlo\serialization\register\serialization_fx.cpp" />
     <ClCompile Include="qlo\valueobjects\vo_abcd.cpp" />
     <ClCompile Include="qlo\valueobjects\vo_accountingengines.cpp" />
     <ClCompile Include="qlo\valueobjects\vo_alphaform.cpp" />
@@ -248,6 +251,7 @@
     <ClCompile Include="qlo\valueobjects\vo_evolutiondescription.cpp" />
     <ClCompile Include="qlo\valueobjects\vo_exercise.cpp" />
     <ClCompile Include="qlo\valueobjects\vo_forwardrateagreement.cpp" />
+    <ClCompile Include="qlo\valueobjects\vo_fx.cpp" />
     <ClCompile Include="qlo\valueobjects\vo_index.cpp" />
     <ClCompile Include="qlo\valueobjects\vo_interpolation.cpp" />
     <ClCompile Include="qlo\valueobjects\vo_latentmodels.cpp" />
@@ -495,6 +499,9 @@
     <ClInclude Include="qlo\enumerations\factories\payoffsfactory.hpp" />
     <ClInclude Include="qlo\enumerations\factories\pricingenginesfactory.hpp" />
     <ClInclude Include="qlo\enumerations\factories\termstructuresfactory.hpp" />
+    <ClInclude Include="qlo\fx.hpp" />
+    <ClInclude Include="qlo\serialization\create\create_fx.hpp" />
+    <ClInclude Include="qlo\serialization\register\serialization_fx.hpp" />
     <ClInclude Include="qlo\valueobjects\vo_abcd.hpp" />
     <ClInclude Include="qlo\valueobjects\vo_accountingengines.hpp" />
     <ClInclude Include="qlo\valueobjects\vo_all.hpp" />
@@ -519,6 +526,7 @@
     <ClInclude Include="qlo\valueobjects\vo_evolutiondescription.hpp" />
     <ClInclude Include="qlo\valueobjects\vo_exercise.hpp" />
     <ClInclude Include="qlo\valueobjects\vo_forwardrateagreement.hpp" />
+    <ClInclude Include="qlo\valueobjects\vo_fx.hpp" />
     <ClInclude Include="qlo\valueobjects\vo_group.hpp" />
     <ClInclude Include="qlo\valueobjects\vo_index.hpp" />
     <ClInclude Include="qlo\valueobjects\vo_interpolation.hpp" />
