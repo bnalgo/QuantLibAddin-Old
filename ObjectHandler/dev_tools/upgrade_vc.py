@@ -2,9 +2,9 @@
 import shutil
 import re
 
-OLD_VER = "vc11"
-NEW_VER = "vc12"
-ROOT_DIR = "C:/Users/erik/Documents/repos/quantlib.v1.5.x/"
+OLD_VER = "_vc12"
+NEW_VER = ""
+ROOT_DIR = "C:/Users/spams/projects/QuantLibAddin-Old/"
 
 FILES = (
 
@@ -42,54 +42,58 @@ FILES = (
     "ObjectHandler/xlsdk/xlsdk_vcxx.vcxproj",
     #"ObjectHandler/xlsdk/xlsdk_vcxx.vcxproj.filters",
 
-    "QuantLibAddin/Addins/Cpp/AddinCpp_vcxx.vcxproj",
-    "QuantLibAddin/Addins/Cpp/AddinCpp_vcxx.vcxproj.filters",
-    "QuantLibAddin/Clients/Cpp/ClientCppDemo_vcxx.vcxproj",
-    #"QuantLibAddin/Clients/Cpp/ClientCppDemo_vcxx.vcxproj.filters",
-    "QuantLibAddin/Clients/CppInstrumentIn/CppInstrumentIn_vcxx.vcxproj",
-    #"QuantLibAddin/Clients/CppInstrumentIn/CppInstrumentIn_vcxx.vcxproj.filters",
-    "QuantLibAddin/Clients/CppSwapOut/ClientCppSwapOut_vcxx.vcxproj",
-    #"QuantLibAddin/Clients/CppSwapOut/ClientCppSwapOut_vcxx.vcxproj.filters",
-    "QuantLibAddin/Docs/docs-QuantLibAddin_vcxx.vcxproj",
-    "QuantLibAddin/Docs/docs-QuantLibAddin_vcxx.vcxproj.filters",
-    "QuantLibAddin/gensrc/qlgensrc_vcxx.vcxproj",
-    "QuantLibAddin/gensrc/qlgensrc_vcxx.vcxproj.filters",
-    "QuantLibAddin/QuantLibAddin_vcxx.sln",
-    "QuantLibAddin/QuantLibObjects_vcxx.vcxproj",
-    "QuantLibAddin/QuantLibObjects_vcxx.vcxproj.filters",
-    "QuantLibAddin/QuantLibObjects2_vcxx.vcxproj",
-    "QuantLibAddin/QuantLibObjects2_vcxx.vcxproj.filters",
-    "QuantLibAddin/QuantLibObjects3_vcxx.vcxproj",
-    "QuantLibAddin/QuantLibObjects3_vcxx.vcxproj.filters",
-    "QuantLibAddin/QuantLibObjects4_vcxx.vcxproj",
-    "QuantLibAddin/QuantLibObjects4_vcxx.vcxproj.filters",
-
-    "QuantLibXL/Docs/docs-QuantLibXL_vcxx.vcxproj",
-    "QuantLibXL/Docs/docs-QuantLibXL_vcxx.vcxproj.filters",
-    "QuantLibXL/qlxl/QuantLibXLDynamic_vcxx.vcxproj",
-    "QuantLibXL/qlxl/QuantLibXLDynamic_vcxx.vcxproj.filters",
-    "QuantLibXL/qlxl/QuantLibXLStatic_vcxx.vcxproj",
-    "QuantLibXL/qlxl/QuantLibXLStatic_vcxx.vcxproj.filters",
-    "QuantLibXL/qlxl/QuantLibXLStatic2_vcxx.vcxproj",
-    "QuantLibXL/qlxl/QuantLibXLStatic2_vcxx.vcxproj.filters",
-    "QuantLibXL/QuantLibAllDynamic_vcxx.sln",
-    "QuantLibXL/QuantLibXL_basic_vcxx.sln",
-    "QuantLibXL/QuantLibXL_full_vcxx.sln",
+#    "QuantLibAddin/Addins/Cpp/AddinCpp_vcxx.vcxproj",
+#    "QuantLibAddin/Addins/Cpp/AddinCpp_vcxx.vcxproj.filters",
+#    "QuantLibAddin/Clients/Cpp/ClientCppDemo_vcxx.vcxproj",
+#    #"QuantLibAddin/Clients/Cpp/ClientCppDemo_vcxx.vcxproj.filters",
+#    "QuantLibAddin/Clients/CppInstrumentIn/CppInstrumentIn_vcxx.vcxproj",
+#    #"QuantLibAddin/Clients/CppInstrumentIn/CppInstrumentIn_vcxx.vcxproj.filters",
+#    "QuantLibAddin/Clients/CppSwapOut/ClientCppSwapOut_vcxx.vcxproj",
+#    #"QuantLibAddin/Clients/CppSwapOut/ClientCppSwapOut_vcxx.vcxproj.filters",
+#    "QuantLibAddin/Docs/docs-QuantLibAddin_vcxx.vcxproj",
+#    "QuantLibAddin/Docs/docs-QuantLibAddin_vcxx.vcxproj.filters",
+#    "QuantLibAddin/gensrc/qlgensrc_vcxx.vcxproj",
+#    "QuantLibAddin/gensrc/qlgensrc_vcxx.vcxproj.filters",
+#    "QuantLibAddin/QuantLibAddin_vcxx.sln",
+#    "QuantLibAddin/QuantLibObjects_vcxx.vcxproj",
+#    "QuantLibAddin/QuantLibObjects_vcxx.vcxproj.filters",
+#    "QuantLibAddin/QuantLibObjects2_vcxx.vcxproj",
+#    "QuantLibAddin/QuantLibObjects2_vcxx.vcxproj.filters",
+#    "QuantLibAddin/QuantLibObjects3_vcxx.vcxproj",
+#    "QuantLibAddin/QuantLibObjects3_vcxx.vcxproj.filters",
+#    "QuantLibAddin/QuantLibObjects4_vcxx.vcxproj",
+#    "QuantLibAddin/QuantLibObjects4_vcxx.vcxproj.filters",
+#
+#    "QuantLibXL/Docs/docs-QuantLibXL_vcxx.vcxproj",
+#    "QuantLibXL/Docs/docs-QuantLibXL_vcxx.vcxproj.filters",
+#    "QuantLibXL/qlxl/QuantLibXLDynamic_vcxx.vcxproj",
+#    "QuantLibXL/qlxl/QuantLibXLDynamic_vcxx.vcxproj.filters",
+#    "QuantLibXL/qlxl/QuantLibXLStatic_vcxx.vcxproj",
+#    "QuantLibXL/qlxl/QuantLibXLStatic_vcxx.vcxproj.filters",
+#    "QuantLibXL/qlxl/QuantLibXLStatic2_vcxx.vcxproj",
+#    "QuantLibXL/qlxl/QuantLibXLStatic2_vcxx.vcxproj.filters",
+#    "QuantLibXL/QuantLibAllDynamic_vcxx.sln",
+#    "QuantLibXL/QuantLibXL_basic_vcxx.sln",
+#    "QuantLibXL/QuantLibXL_full_vcxx.sln",
 )
 
 for fileName in FILES:
-    fileNameOld = re.sub("vcxx", OLD_VER, fileName)
-    fileNameNew = re.sub("vcxx", NEW_VER, fileName)
+    fileNameOld = re.sub("_vcxx", OLD_VER, fileName)
+    fileNameNew = re.sub("_vcxx", NEW_VER, fileName)
     filePathOld = ROOT_DIR + fileNameOld
     filePathNew = ROOT_DIR + fileNameNew
     print filePathNew
-    shutil.copy(filePathOld, filePathNew)
     if ".vcxproj.filters" == fileName[-16:]:
+    	shutil.copy(filePathOld, filePathNew)
         continue
-    f = open(filePathNew, 'r+')
+    f = open(filePathOld, 'r')
     buf = f.read()
+    f.close()
+    print buf
     buf = re.sub(OLD_VER, NEW_VER, buf)
-    f.seek(0)
+    print "==="
+    print buf
+    f = open(filePathNew, 'w')
     f.write(buf)
     f.close()
 
